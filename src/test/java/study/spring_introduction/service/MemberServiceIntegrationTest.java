@@ -1,12 +1,11 @@
 package study.spring_introduction.service;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 import study.spring_introduction.domain.Member;
-import study.spring_introduction.repository.JdbcMemberRepository;
+import study.spring_introduction.repository.MemberRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -16,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class MemberServiceIntegrationTest {
 
   @Autowired MemberService memberService;
-  @Autowired JdbcMemberRepository memberRepository;
+  @Autowired MemberRepository memberRepository;
 
   @Test
   void 회원가입() {
