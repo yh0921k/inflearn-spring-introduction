@@ -10,3 +10,7 @@ spring:
       path: /h2-console
       settings:
         web-allow-others: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
